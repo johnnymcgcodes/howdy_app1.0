@@ -6,6 +6,7 @@ const cors = require('cors')
 const morgan = require("morgan");
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/api/users')
+const path = require("path");
 app.use(cors())
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
@@ -18,7 +19,7 @@ mongoose
   .then(()=> console.log("MongoDB database connected..."))
   .catch((err) => console.log(err))
 
-const path = require('path')
+
 
 // app.use('/api/bucketListItems.js', bucketListItemRoutes)
 
