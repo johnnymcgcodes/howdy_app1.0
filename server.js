@@ -7,6 +7,7 @@ const morgan = require("morgan");
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/api/users')
 const path = require("path");
+
 app.use(cors())
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
@@ -25,7 +26,7 @@ app.use('/api/users', userRoutes);
 app.get('/', (req, res)=> res.send('Hello planet Earth!'))
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client/dist")));
+  app.use(express.static(path.join("client/dist")));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
   });
