@@ -25,9 +25,11 @@ const path = require('path')
 app.use('/api/users', userRoutes);
 // app.get('/', (req, res)=> res.send('Hello planet Earth!'))
 
-app.use(express.static("client/dist"));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/dist")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
+  });
+}
 
 app.listen(PORT, ()=> console.log(`App listening at http://localhost:${PORT}`))
