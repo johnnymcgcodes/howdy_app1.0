@@ -13,21 +13,21 @@
     {
       "src": "/(.*).js",
       "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/client/dist/$1.js"
+      "dest": "/dist/$1.js"
     },
     {
       "src": "/(.*).css",
       "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/client/dist/$1.css"
+      "dest": "/dist/$1.css"
     },
     {
       "src": "/(.*).(png|jpg|ico|jpeg|gif|webp|svg)",
       "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/client/dist/$1.$2"
+      "dest": "/dist/$1.$2"
     },
     {
       "src": "/(.*)",
-      "dest": "/client/dist/index.html"
+      "dest": "/dist/index.html"
     }
   ],
   "cleanUrls": true
