@@ -23,7 +23,7 @@ mongoose
 
 
 app.use('/api/users', userRoutes);
-app.get('/', (req, res)=> res.send('Hello planet Earth!'))
+// app.get('/', (req, res)=> res.send('Hello planet Earth!'))
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join("client/dist")));
