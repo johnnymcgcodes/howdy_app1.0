@@ -21,7 +21,8 @@ mongoose
 const path = require('path')
 
 // app.use('/api/bucketListItems.js', bucketListItemRoutes)
-app.use('/api/users', userRoutes);
+// removed/users
+app.use('/api', userRoutes);
 // app.get('/', (req, res)=> res.send('Hello planet Earth!'))
 
 if (process.env.NODE_ENV === "production") {
