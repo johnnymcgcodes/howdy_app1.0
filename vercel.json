@@ -29,5 +29,6 @@
       "src": "/(.*)",
       "dest": "/client/dist/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
