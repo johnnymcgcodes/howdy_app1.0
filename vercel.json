@@ -9,25 +9,22 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*).js",
-      "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/dist/$1.js"
+      "source": "/(.*).js",
+      "destination": "/dist/$1.js"
     },
     {
-      "src": "/(.*).css",
-      "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/dist/$1.css"
+      "source": "/(.*).css",
+      "destination": "/dist/$1.css"
     },
     {
-      "src": "/(.*).(png|jpg|ico|jpeg|gif|webp|svg)",
-      "headers": { "cache-control": "public,max-age=31536000,immutable" },
-      "dest": "/dist/$1.$2"
+      "source": "/(.*).(png|jpg|ico|jpeg|gif|webp|svg)",
+      "destination": "/dist/$1.$2"
     },
     {
-      "src": "/(.*)",
-      "dest": "/dist/index.html"
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
     }
   ],
   "cleanUrls": true
