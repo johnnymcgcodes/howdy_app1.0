@@ -6,6 +6,7 @@ const cors = require('cors')
 const morgan = require("morgan");
 const bodyParser = require('body-parser')
 const userRoutes = require('./routes/api/users')
+// const usersRouter = require("./routes/api/users");
 const path = require("path");
 
 app.use(cors())
@@ -23,6 +24,7 @@ mongoose
 
 
 app.use('/api/users', userRoutes);
+app.use("/api/users/signup", userRoutes);
 // app.get('/', (req, res)=> res.send('Hello planet Earth!'))
 
 if (process.env.NODE_ENV === "production") {

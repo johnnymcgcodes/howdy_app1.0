@@ -7,7 +7,10 @@
       <h2 class="greeting-line">Assess, Meditate.</h2>
     </div>
      <button v-show="!showLoginForm" @click="showLoginForm = true">Log In</button>
-    <button v-show="!showLoginForm">Sign Up</button>
+  
+    <router-link to="./SignUp.vue">
+      <button v-show="!showLoginForm">Sign Up</button>
+    </router-link>
 <div v-if="showLoginForm" class="login-form fade-in" >
       <h3></h3>
       <form @submit.prevent="login">

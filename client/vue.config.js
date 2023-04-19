@@ -1,6 +1,5 @@
 module.exports = {
   // outputDir: "dist",
-  configureWebpack: {
   devServer: {
     port: 8080,
     proxy: {
@@ -10,5 +9,4 @@ module.exports = {
       },
     },
   },
-},
-};
+}
